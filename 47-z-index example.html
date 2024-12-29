@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>overlapping elements</title>
+        <style>
+            .container{
+                        position: relative;
+            }
+            .blackbox{
+                position: relative;
+                z-index: 1;
+                height: 100px;
+                margin: 30px;
+                border: 2px solid black;
+            }
+            .graybox{
+                position: absolute;
+                z-index: 3;/*grey box will be above both green and blackbox*/
+                background-color: lightgray;
+                height: 60px;
+                width: 70%;
+                left: 50px;
+                top: 50px;
+            }
+            .greenbox{
+                position: absolute;
+                z-index: 2;
+                background-color: lightgreen;
+                width: 35%;
+                left: 270px;
+                top: -15px;
+                height: 100px;
+            }
+            
+        </style>
+        </head>
+        <body>
+        <h1>z-index example</h1>
+        <p>an element with greater stack order is always above an element with a lower stack order</p>
+        <div class="container"
+        <div class="blackbox">blackbox</div>
+        <div class="graybox">graybox</div>
+        <div class="greenbox">greenbox</div>
+        </body>
+        </html>
+        
